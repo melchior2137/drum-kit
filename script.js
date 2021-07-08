@@ -5,10 +5,10 @@ myPads.forEach(myPad => myPad.addEventListener('click', event => {
     const audio = document.querySelector(`audio[data-key="${event.target.dataset.key}"]`);
     audio.currentTime = 0;
     audio.play();
-    myPad.classList.add("playing");
-    setTimeout(function(){
-    myPad.classList.remove("playing");
-    },50);
+    myPad.classList.toggle("playing");
+    //setTimeout(function(){
+    //myPad.classList.remove("playing");
+    //},50);
 }));
 
 window.addEventListener('keydown', event => {
@@ -16,10 +16,10 @@ window.addEventListener('keydown', event => {
     const audio = document.querySelector(`audio[data-key="${event.keyCode}"]`);
     audio.currentTime = 0;
     audio.play();
-    myPad.classList.add("playing");
-    setTimeout(function(){
-    myPad.classList.remove("playing");
-    },50);
+    myPad.classList.toggle("playing");
+    //setTimeout(function(){
+    //myPad.classList.remove("playing");
+    //},50);
 });
 
 myPads.forEach(myPad => myPad.addEventListener('transitionend', event => {

@@ -6,9 +6,9 @@ myPads.forEach(myPad => myPad.addEventListener('click', event => {
     audio.currentTime = 0;
     audio.play();
     myPad.classList.add("playing");
-    //setTimeout(function(){
-    //myPad.classList.remove("playing");
-    //},50);
+    setTimeout(function(){
+    myPad.classList.remove("playing");
+    },50);
 }));
 
 window.addEventListener('keydown', event => {
@@ -17,9 +17,9 @@ window.addEventListener('keydown', event => {
     audio.currentTime = 0;
     audio.play();
     myPad.classList.add("playing");
-    //setTimeout(function(){
-    //myPad.classList.remove("playing");
-    //},50);
+    setTimeout(function(){
+    myPad.classList.remove("playing");
+    },50);
 });
 
 myPads.forEach(myPad => myPad.addEventListener('transitionend', event => {

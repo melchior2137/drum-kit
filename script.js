@@ -30,8 +30,6 @@ myPads.forEach(myPad => myPad.addEventListener('transitionend', event => {
 let selection = document.querySelectorAll(".selection");
 
 selection.forEach(select => select.addEventListener('change', event =>{
-    console.log(event.target.name);
-    console.log(event.target.value);
     let audio = document.getElementById(`${event.target.name}`);
     audio.src = "drums/" + event.target.value + ".mp3";
 }));

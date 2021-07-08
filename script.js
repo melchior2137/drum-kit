@@ -33,7 +33,7 @@ selection.forEach(select => select.addEventListener('change', event =>{
     console.log(event.target.name);
     console.log(event.target.value);
     let audio = document.getElementById(`${event.target.name}`);
-    audio.src = "drums/" + event.target.value + ".wav";
+    audio.src = "drums/" + event.target.value + ".mp3";
 }));
 
 //selection.forEach(select => select.addEventListener('click', event =>{

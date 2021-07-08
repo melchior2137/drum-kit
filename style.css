@@ -1,16 +1,15 @@
 body, html {
-    height: 100%;
+    height: 100vh;
     font-family: 'Encode Sans', sans-serif;
 }
 
 body {
     /* The image used */
-    background-image: url("background.jpg");
+    background-image: url("img/background.jpg");
     /* Full height */
-    height: 100%;
+    height: 100vh;
     /* Center and scale the image nicely */
     background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
 }
 
@@ -21,7 +20,7 @@ h1 {
     color: #FFFFFF;
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
     text-align: center;
-    margin-top: 3rem;
+    padding-top: 3rem;
 }
 
 h2 {
@@ -37,13 +36,16 @@ h2 {
     margin-top: 6.25rem;
     display: flex;
     justify-content: center;
-    gap:3rem;   
+    gap: 3rem;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .pads-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-shrink: 1;
 }
 
 .pads {
@@ -53,10 +55,18 @@ h2 {
     border: 8px solid #FFFFFF;
     box-sizing: border-box;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 15px;
+    border-radius: 0.75rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.1s;
+}
+
+.playing {
+    transform: scale(1.1);
+    border-color: red;
+    box-shadow:0 0 50px 1px red;
+    background: rgba(22, 22, 23, 0.6);
 }
 
 .pads h3 {
@@ -69,25 +79,30 @@ h2 {
 
 .selection {
     width: 15.63rem;
-    height: 3.125rem;
-    border-radius: 3.125rem;
+    height: 4.125rem;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
+    font-family: 'Encode Sans', sans-serif;
     font-size: 2.25rem;
-    text-align: center;
     color: #000000;
-    outline: none;  
+    outline: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    appearance: none;       /* Remove default arrow */
-    background: url(arrow.png) 96% / 15% no-repeat #EEE;
+    appearance: none;
+    /* Remove default arrow */
+    background: url(img/arrow.png) 96% / 15% no-repeat #EEE;
     background-color: #fff;
-    padding: 0 3rem;
-    text-align: center;
-    transition: 1s;
+    text-align-last: center;
+    transition: 0.5s;
     margin-top: 2rem;
+    padding: 0.625rem
+    1.625rem
+ 0.625rem
+    0.625rem
+;
 }
+.selection option{
+    text-align: center;
+    text-align-last: center;
 
-.selection:active, .selection:hover{
-    border-radius: 0;
 }

@@ -21,8 +21,8 @@
     <h2>Play with mouse or ASDF</h2>
     <div class="wrapper">
         <div class="pads-wrapper">
-            <div class="pads">
-                <h3>Kick</h3>
+            <div id="pad1" class="pads" data-key="65">
+                <h3 data-key="65">A</h3>
             </div>
             <select name="kicks" class="selection">
                 <option value="kick1">Kick 1</option>
@@ -32,8 +32,8 @@
             </select>
         </div>
         <div class="pads-wrapper">
-            <div class="pads">
-                <h3>Snare</h3>
+            <div class="pads" data-key=83>
+                <h3 data-key=83>S</h3>
             </div>
             <select name="snares" class="selection">
                 <option value="snare1">Snare 1</option>
@@ -43,8 +43,8 @@
             </select>
         </div>
         <div class="pads-wrapper">
-            <div class="pads">
-                <h3>Clap</h3>
+            <div class="pads" data-key=68>
+                <h3 data-key=68>D</h3>
             </div>
             <select name="claps" class="selection">
                 <option value="clap1">Clap 1</option>
@@ -54,18 +54,21 @@
             </select>
         </div>
         <div class="pads-wrapper">
-            <div class="pads">
-                <h3>Hi-hat</h3>
+            <div class="pads" data-key=70>
+                <h3 data-key=70>F</h3>
             </div>
-            <select name="kicks" class="selection">
-                <option value="kick1">Kick 1</option>
-                <option value="kick2">Kick 2</option>
-                <option value="kick3">Kick 3</option>
-                <option value="kick4">Kick 4</option>
+            <select name="hihats" class="selection">
+                <option value="hihat1">Hi-hat 1</option>
+                <option value="hihat2">Hi-hat 2</option>
+                <option value="hihat3">Hi-hat 3</option>
+                <option value="hihat4">Hi-hat 4</option>
             </select>
         </div>
 
-
+        <audio id="kicks" data-key=65 src="drums/kick1.wav"></audio>
+        <audio id ="snares" data-key=83 src="drums/snare1.wav"></audio>
+        <audio id="claps" data-key=68 src="drums/clap1.wav"></audio>
+        <audio id="hihats" data-key=70 src="drums/hihat1.wav"></audio>
 
         <script src="script.js"></script>
 </body>
